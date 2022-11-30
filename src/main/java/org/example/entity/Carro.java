@@ -1,22 +1,17 @@
 package org.example.entity;
 
-import org.example.enums.Categoria;
-import org.example.enums.Combustivel;
-import org.example.enums.Transmissao;
-
 public class Carro {
 
-    private Categoria categoria;
-    private Transmissao transmissao;
-    private Combustivel combustivel;
+    private String categoria;
+    private String transmissao;
+    private String combustivel;
     private String marca;
     private String modelo;
 
     public Carro(){
-
     }
 
-    public Carro(Categoria categoria, Transmissao transmissao, Combustivel combustivel, String marca, String modelo) {
+    public Carro(String categoria, String transmissao, String combustivel, String marca, String modelo) {
         this.categoria = categoria;
         this.transmissao = transmissao;
         this.combustivel = combustivel;
@@ -24,27 +19,27 @@ public class Carro {
         this.modelo = modelo;
     }
 
-    public Categoria getCategoria() {
+    public String getCategoria() {
         return categoria;
     }
 
-    public void setCategoria(Categoria categoria) {
+    public void setCategoria(String categoria) {
         this.categoria = categoria;
     }
 
-    public Transmissao getTransmissao() {
+    public String getTransmissao() {
         return transmissao;
     }
 
-    public void setTransmissao(Transmissao transmissao) {
+    public void setTransmissao(String transmissao) {
         this.transmissao = transmissao;
     }
 
-    public Combustivel getCombustivel() {
+    public String getCombustivel() {
         return combustivel;
     }
 
-    public void setCombustivel(Combustivel combustivel) {
+    public void setCombustivel(String combustivel) {
         this.combustivel = combustivel;
     }
 
@@ -62,5 +57,16 @@ public class Carro {
 
     public void setModelo(String modelo) {
         this.modelo = modelo;
+    }
+
+    @Override
+    public String toString() {
+        return "Carro{" +
+                "categoria='" + categoria + '\'' +
+                ", transmissao='" + transmissao + '\'' +
+                ", combustivel='" + combustivel + '\'' +
+                ", marca='" + marca + '\'' +
+                ", modelo='" + modelo + '\'' +
+                '}';
     }
 }

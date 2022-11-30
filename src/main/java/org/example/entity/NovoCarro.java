@@ -1,29 +1,29 @@
 package org.example.entity;
 
-import org.example.enums.Categoria;
-import org.example.enums.Combustivel;
-import org.example.enums.Transmissao;
-
 public class NovoCarro extends Carro{
 
-    private Long ano;
+    private Integer ano;
     private String placa;
 
     public NovoCarro(){
     }
 
-    public NovoCarro(Categoria categoria, Transmissao transmissao, Combustivel combustivel,
-                     String marca, String modelo, Long ano, String placa) {
+    public NovoCarro(Integer ano, String placa) {
+        this.ano = ano;
+        this.placa = placa;
+    }
+
+    public NovoCarro(String categoria, String transmissao, String combustivel, String marca, String modelo, Integer ano, String placa) {
         super(categoria, transmissao, combustivel, marca, modelo);
         this.ano = ano;
         this.placa = placa;
     }
 
-    public Long getAno() {
+    public Integer getAno() {
         return ano;
     }
 
-    public void setAno(Long ano) {
+    public void setAno(Integer ano) {
         this.ano = ano;
     }
 
