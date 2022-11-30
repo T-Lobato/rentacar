@@ -5,21 +5,28 @@ import org.example.entity.enums.Transmissao;
 
 public class Carro {
 
+    private int id;
     private String categoria;
     private Transmissao transmissao;
     private Combustivel combustivel;
     private String marca;
     private String modelo;
+    private boolean alugado = false;
 
-    public Carro() {
+    public boolean isAlugado() {
+        return alugado;
     }
 
-    public Carro(String categoria, Transmissao transmissao, Combustivel combustivel, String marca, String modelo) {
-        this.categoria = categoria;
-        this.transmissao = transmissao;
-        this.combustivel = combustivel;
-        this.marca = marca;
-        this.modelo = modelo;
+    public void setAlugado(boolean alugado) {
+        this.alugado = alugado;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getCategoria() {
@@ -64,7 +71,8 @@ public class Carro {
 
     @Override
     public String toString() {
-        return "Categoria: " + categoria +
+        return "Id: " + id +
+                " - Categoria: " + categoria +
                 " - Transmissao: " + transmissao +
                 " - Combustivel: " + combustivel +
                 " - Marca: " + marca +

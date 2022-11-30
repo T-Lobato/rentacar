@@ -7,14 +7,19 @@ import java.util.List;
 
 public class ClienteDAO {
 
-    private List<Cliente> clientes = new ArrayList<>();
+    private static List<Cliente> clientes = new ArrayList<>();
 
     public void salvar(Cliente cliente){
+        cliente.setId(clientes.size() + 1);
         clientes.add(cliente);
     }
 
     public List<Cliente> listar(){
         return clientes;
+    }
+
+    public Cliente buscarPorId(int id){
+        return clientes.get(id - 1);
     }
 
 }

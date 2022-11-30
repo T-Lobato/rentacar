@@ -34,9 +34,27 @@ public class CarroService {
         carroDAO.salvar(carro);
     }
 
-    public void listar(){
+    public void listarAlugados(){
+        List<Carro> carros = carroDAO.listar();
+        for(Carro c: carros){
+            if(c.isAlugado()) System.out.println(c);
+        }
+    }
+
+    public void listarLivres(){
+        List<Carro> carros = carroDAO.listar();
+        for(Carro c: carros){
+            if(!c.isAlugado()) System.out.println(c);
+        }
+    }
+
+    public void listarTodos(){
         List<Carro> carros = carroDAO.listar();
         carros.forEach(System.out::println);
+    }
+
+    public Carro alugar(int id) {
+        return carroDAO.atualizarStatus(id - 1);
     }
 
 }

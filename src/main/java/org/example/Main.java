@@ -2,6 +2,7 @@ package org.example;
 
 import org.example.service.CarroService;
 import org.example.service.ClienteService;
+import org.example.service.LocacaoService;
 
 import java.util.Scanner;
 
@@ -10,6 +11,7 @@ public class Main {
 
         CarroService carroService = new CarroService();
         ClienteService clienteService = new ClienteService();
+        LocacaoService locacaoService = new LocacaoService();
         Scanner sc = new Scanner(System.in);
 
         // Listas
@@ -25,13 +27,17 @@ public class Main {
             int opcao = sc.nextInt();
             if(opcao == 1){
                 carroService.salvar();
-            } else if (opcao == 2) {
+            } else if(opcao == 2) {
                 clienteService.salvar();
+            } else if(opcao == 3){
+                locacaoService.salvar();
+            } else if(opcao == 4) {
+                locacaoService.listar();
             } else {
                 break;
             }
         }
-        carroService.listar();
+        carroService.listarTodos();
         clienteService.listar();
     }
 }

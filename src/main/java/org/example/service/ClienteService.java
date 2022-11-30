@@ -32,4 +32,8 @@ public class ClienteService {
         clientes.forEach(System.out::println);
     }
 
+    public Cliente buscarPorId(int id){
+        return clienteDAO.buscarPorId(id);
+    }
+
 }

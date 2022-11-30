@@ -2,17 +2,17 @@ package org.example.entity;
 
 public class Cliente {
 
+    private int id;
     private String nome;
     private String cpf;
     private String rg;
 
-    public Cliente(){
+    public int getId() {
+        return id;
     }
 
-    public Cliente(String nome, String cpf, String rg) {
-        this.nome = nome;
-        this.cpf = cpf;
-        this.rg = rg;
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getNome() {
@@ -41,8 +41,10 @@ public class Cliente {
 
     @Override
     public String toString() {
-        return "Nome: " + nome +
+        return "Id: " + id +
+                " - Nome: " + nome +
                 " - CPF: " + cpf +
-                "- RG: " + rg;
+                " - RG: " + rg;
     }
+
 }
