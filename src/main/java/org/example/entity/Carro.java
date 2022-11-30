@@ -1,17 +1,20 @@
 package org.example.entity;
 
+import org.example.entity.enums.Combustivel;
+import org.example.entity.enums.Transmissao;
+
 public class Carro {
 
     private String categoria;
-    private String transmissao;
-    private String combustivel;
+    private Transmissao transmissao;
+    private Combustivel combustivel;
     private String marca;
     private String modelo;
 
-    public Carro(){
+    public Carro() {
     }
 
-    public Carro(String categoria, String transmissao, String combustivel, String marca, String modelo) {
+    public Carro(String categoria, Transmissao transmissao, Combustivel combustivel, String marca, String modelo) {
         this.categoria = categoria;
         this.transmissao = transmissao;
         this.combustivel = combustivel;
@@ -27,19 +30,19 @@ public class Carro {
         this.categoria = categoria;
     }
 
-    public String getTransmissao() {
+    public Transmissao getTransmissao() {
         return transmissao;
     }
 
-    public void setTransmissao(String transmissao) {
+    public void setTransmissao(Transmissao transmissao) {
         this.transmissao = transmissao;
     }
 
-    public String getCombustivel() {
+    public Combustivel getCombustivel() {
         return combustivel;
     }
 
-    public void setCombustivel(String combustivel) {
+    public void setCombustivel(Combustivel combustivel) {
         this.combustivel = combustivel;
     }
 
@@ -61,12 +64,10 @@ public class Carro {
 
     @Override
     public String toString() {
-        return "Carro{" +
-                "categoria='" + categoria + '\'' +
-                ", transmissao='" + transmissao + '\'' +
-                ", combustivel='" + combustivel + '\'' +
-                ", marca='" + marca + '\'' +
-                ", modelo='" + modelo + '\'' +
-                '}';
+        return "Categoria: " + categoria +
+                " - Transmissao: " + transmissao +
+                " - Combustivel: " + combustivel +
+                " - Marca: " + marca +
+                " - Modelo: " + modelo;
     }
 }

@@ -1,4 +1,4 @@
-package org.example.enums;
+package org.example.entity.enums;
 
 public enum Combustivel {
 
