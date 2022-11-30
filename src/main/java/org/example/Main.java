@@ -37,7 +37,5 @@ public class Main {
                 break;
             }
         }
-        carroService.listarTodos();
-        clienteService.listar();
     }
 }
