@@ -7,7 +7,6 @@ public class Cliente {
     private String rg;
 
     public Cliente(){
-
     }
 
     public Cliente(String nome, String cpf, String rg) {
@@ -38,5 +37,12 @@ public class Cliente {
 
     public void setRg(String rg) {
         this.rg = rg;
+    }
+
+    @Override
+    public String toString() {
+        return "Nome: " + nome +
+                " - CPF: " + cpf +
+                "- RG: " + rg;
     }
 }

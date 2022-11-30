@@ -1,18 +1,15 @@
 package org.example;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
-import org.example.entity.Carro;
-import org.example.entity.NovoCarro;
-import org.example.entity.enums.Combustivel;
-import org.example.entity.enums.Transmissao;
 import org.example.service.CarroService;
+import org.example.service.ClienteService;
+
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
 
         CarroService carroService = new CarroService();
+        ClienteService clienteService = new ClienteService();
         Scanner sc = new Scanner(System.in);
 
         // Listas
@@ -28,10 +25,13 @@ public class Main {
             int opcao = sc.nextInt();
             if(opcao == 1){
                 carroService.salvar();
+            } else if (opcao == 2) {
+                clienteService.salvar();
             } else {
                 break;
             }
         }
         carroService.listar();
+        clienteService.listar();
     }
 }
