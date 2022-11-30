@@ -17,7 +17,7 @@ public class Locacao {
 
     @Override
     public String toString() {
-        return "Ínicio: " + inicio +
+        return "Início: " + inicio +
                 " - Fim: " + fim +
                 " - Carro: " + carro.getModelo() +
                 " - Cliente: " + cliente.getNome();

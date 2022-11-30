@@ -24,6 +24,10 @@ public class LocacaoService {
     }
 
     public void salvar(){
+        if(carroService.carrosLivres() == 0){
+            System.out.println("Não há carros livres para alugar!");
+            return;
+        }
         System.out.println("====================== Clientes ======================");
         clienteService.listar();
         System.out.print("Digite o ID do cliente: ");
@@ -48,7 +52,9 @@ public class LocacaoService {
 
     public void listar(){
         List<Locacao> locacoes = locacaoDAO.listar();
+        System.out.println("===========================================");
         locacoes.forEach(System.out::println);
+        System.out.println("===========================================");
     }
 
 }

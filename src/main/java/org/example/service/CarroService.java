@@ -57,4 +57,8 @@ public class CarroService {
         return carroDAO.atualizarStatus(id - 1);
     }
 
+    public int carrosLivres(){
+        return carroDAO.contarLivres();
+    }
+
 }

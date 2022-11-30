@@ -28,4 +28,12 @@ public class CarroDAO {
         return carro;
     }
 
+    public int contarLivres(){
+        int count = 0;
+        for(Carro c: carros){
+            if(!c.isAlugado()) count++;
+        }
+        return count;
+    }
+
 }
